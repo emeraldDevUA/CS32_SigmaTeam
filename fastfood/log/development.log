@@ -1,0 +1,801 @@
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-03-03 18:14:55.391925', '2024-03-03 18:14:55.391931') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20240303181440)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240303181440') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-03-03 18:59:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6017)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 2.0ms | Allocations: 24554)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:01:22 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 378)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3220)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 3479)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:01:22 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1641)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 14300)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.4ms | Allocations: 14987)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:05:45 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3208)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms | Allocations: 3457)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:10:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4610)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.0ms | Allocations: 15531)
+
+
+  
+ActionView::Template::Error (can't require absolute file: C:UsersYaroslavnode_modulesbootstrapdistcss):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:10:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5241)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.1ms | Allocations: 16162)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    2: <html>
+    3: <head>
+    4:   <!-- другие теги head -->
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    7: </head>
+    8: <body>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:13:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5540)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 2.0ms | Allocations: 16461)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    11:   <link rel="stylesheet" href="C:/Users/Yaroslav/node_modules/bootstrap/dist/css">
+    12: 
+    13:   <!-- Підключіть ваші стилі -->
+    14:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    15: </head>
+    16: <body>
+    17: <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:15:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4105)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.9ms | Allocations: 15026)
+
+
+  
+ActionView::Template::Error (The asset "bootstrap/dist/css/bootstrap.min.css" is not present in the asset pipeline.
+):
+     8:   <%= csp_meta_tag %>
+     9: 
+    10:   <!-- Підключіть файл CSS Bootstrap -->
+    11:   <link rel="stylesheet" href="<%= asset_path('bootstrap/dist/css/bootstrap.min.css') %>">
+    12: 
+    13:   <!-- Підключіть ваші стилі -->
+    14:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:26:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5540)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.1ms | Allocations: 16461)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    11:   <link rel="stylesheet" href="">
+    12: 
+    13:   <!-- Підключіть ваші стилі -->
+    14:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    15: </head>
+    16: <body>
+    17: <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-03-03 19:47:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 5540)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 1.9ms | Allocations: 16461)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap/dist/css/bootstrap' with type 'text/css'
+Checked in these paths: 
+  C:/Users/Yaroslav/fastfood/app/assets/config
+  C:/Users/Yaroslav/fastfood/app/assets/images
+  C:/Users/Yaroslav/fastfood/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/stimulus-rails-1.3.3/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.4/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actiontext-7.1.3.2/app/assets/stylesheets
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actioncable-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/activestorage-7.1.3.2/app/assets/javascripts
+  C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/actionview-7.1.3.2/app/assets/javascripts
+  C:/Users/Yaroslav/fastfood/app/javascript
+  C:/Users/Yaroslav/fastfood/vendor/javascript):
+    11:   <link rel="stylesheet" href="">
+    12: 
+    13:   <!-- Підключіть ваші стилі -->
+    14:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    15: </head>
+    16: <body>
+    17: <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:06:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5395)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 2.1ms | Allocations: 16326)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: C:/Users/Yaroslav/node_modules/bootstrap/scss.
+        on line 1:1 of app/assets/stylesheets/application.scss
+>> @import 'C:/Users/Yaroslav/node_modules/bootstrap/scss';
+
+   ^
+):
+    11:   <link rel="stylesheet" href="">
+    12: 
+    13:   <!-- Підключіть ваші стилі -->
+    14:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    15: </head>
+    16: <body>
+    17: <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:08:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 1725.8ms | Allocations: 120769)
+Completed 500 Internal Server Error in 1769ms (ActiveRecord: 2.0ms | Allocations: 131691)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/Yaroslav/fastfood/tmp/cache/assets/sprockets/v4.0.0/_s/_sQXw4RbLASgCvgiGQUua3kAjVRZEYgr315wQ6o0iGg.cache.22020.7180.257190, C:/Users/Yaroslav/fastfood/tmp/cache/assets/sprockets/v4.0.0/_s/_sQXw4RbLASgCvgiGQUua3kAjVRZEYgr315wQ6o0iGg.cache)):
+  
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.1) lib/sprockets/loader.rb:268:in `store_asset'
+sprockets (4.2.1) lib/sprockets/loader.rb:228:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Programms/Ruby32-x64/lib/ruby/3.2.0/set.rb:511:in `each_key'
+C:/Programms/Ruby32-x64/lib/ruby/3.2.0/set.rb:511:in `each'
+sprockets (4.2.1) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:10:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 33189)
+Completed 200 OK in 199ms (Views: 164.0ms | ActiveRecord: 2.0ms | Allocations: 44163)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:14:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 160.4ms | Allocations: 32944)
+Completed 200 OK in 220ms (Views: 173.7ms | ActiveRecord: 0.0ms | Allocations: 43918)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:16:42 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5611)
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 7131)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:19:01 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5129)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5406)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:19:01 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5126)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5402)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:19:17 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5603)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7120)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:19:44 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5608)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 7125)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:20:22 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5606)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 7125)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:20:43 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5611)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 7128)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:21:06 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 5119)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 5387)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:22:28 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 5125)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 5393)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:29:44 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5606)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 7123)
+
+
+Started GET "/auth.html" for 127.0.0.1 at 2024-03-03 20:29:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth.html"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:33:20 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5623)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7141)
+
+
+Started GET "/auth.html" for 127.0.0.1 at 2024-03-03 20:33:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth.html"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:36:02 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5600)
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 7117)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:36:03 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 5137)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 5405)
+
+
+Started GET "/auth.html" for 127.0.0.1 at 2024-03-03 20:36:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth.html"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:37:44 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5606)
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 7123)
+
+
+Started GET "/auth.html" for 127.0.0.1 at 2024-03-03 20:37:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth.html"):
+  
+Started GET "/auth.html" for 127.0.0.1 at 2024-03-03 20:39:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth.html"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:39:28 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 5599)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 7079)
+
+
+Started GET "/auth" for 127.0.0.1 at 2024-03-03 20:39:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+Started GET "/auth" for 127.0.0.1 at 2024-03-03 20:40:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:41:26 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5611)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7128)
+
+
+Started GET "/auth" for 127.0.0.1 at 2024-03-03 20:41:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:42:11 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5610)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7127)
+
+
+Started GET "/auth" for 127.0.0.1 at 2024-03-03 20:42:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:43:13 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5600)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 7117)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:44:18 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5611)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 7128)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:45:05 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5634)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 7151)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:46:35 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5601)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started GET "/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:46:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/avtorisation.html.erb"):
+  
+Started GET "/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:47:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/avtorisation.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:47:51 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 270)
+Completed 200 OK in 31ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1017)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:48:00 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Programms/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:48:57 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5615)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 7132)
+
+
+Started GET "/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:49:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/avtorisation.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:50:13 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5228)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 5498)
+
+
+Started GET "/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:50:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/avtorisation.html.erb"):
+  
+Started GET "/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:50:28 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/avtorisation.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:51:43 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5601)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started GET "/app/views/products/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/products/avtorisation.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:53:00 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5225)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 5495)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:55:02 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5122)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 5390)
+
+
+Started GET "/app/views/products/avtorisation.html.erb" for 127.0.0.1 at 2024-03-03 20:55:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/products/avtorisation.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:55:13 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5601)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-03 20:55:16 +0000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5125)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 5393)
+
+
