@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Головна сторінка</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin-top: 50px;
+      }
+      .logout-button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #dc3545;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      .logout-button:hover {
+          background-color: #c82333;
+      }
+
+      .categories-container {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+      }
+      .category {
+          width: 30%;
+          border: 1px solid #ccc;
+          padding: 20px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      .category:hover {
+          background-color: #f0f0f0;
+      }
+      .logout-container {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+      }
+  </style>
+</head>
+<body>
+<div class="logout-container">
+  <%= button_to 'Вийти', logout_path, method: :delete, class: 'logout-button' %>
+</div>
+<h1>Оберіть категорію їжі</h1>
+<div class="categories-container">
+  <div class="category" onclick="location.href='/foods/pizza'">Піца</div>
+  <div class="category" onclick="location.href='/foods/burgers'">Бургери</div>
+  <div class="category" onclick="location.href='/foods/sushi'">Суші</div>
+</div>
+</body>
+</html>
