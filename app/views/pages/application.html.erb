@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FastFood Website</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- Подключаем стили Bootstrap -->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' %>
+
+  <!-- Дополнительные стили, если необходимо -->
+  <%= yield :stylesheets %>
+</head>
+<body>
+<%= yield %>
+
+<!-- Подключаем скрипты Bootstrap -->
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' %>
+
+<!-- Дополнительные скрипты, если необходимо -->
+<%= yield :javascripts %>
+</body>
+</html>

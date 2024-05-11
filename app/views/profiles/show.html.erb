@@ -1,0 +1,31 @@
+<!-- app/views/profiles/show.html.erb -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій профіль</title>
+  <!-- Подключаем стили Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Мій профіль</h3>
+        </div>
+        <div class="card-body">
+          <p><strong>Email:</strong> <%= @user.email %></p>
+          <p><strong>Preferred Currency:</strong> <%= @user.preferred_currency %></p>
+          <!-- Отображаем курс валюты к доллару -->
+          <p><strong>Currency to USD Rate:</strong> <%= number_to_currency(@currency_rate) %></p>
+          <p><strong>Preferred Currency:</strong> <%= @user.preferred_currency %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

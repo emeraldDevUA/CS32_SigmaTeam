@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Види суші</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f9fa; /* Колір фону */
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+          background-color: rgba(255, 255, 255, 0.8); /* Прозорий фон контейнера */
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь контейнера */
+      }
+
+      .sushi {
+          width: calc(33.33% - 40px); /* Однакова ширина для кожного блоку з суші */
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+          background-color: #fff;
+          transition: box-shadow 0.3s ease;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .sushi:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transform: scale(1.05); /* Збільшуємо зображення при наведенні */
+      }
+
+      .sushi img {
+          width: 200px;
+          border-radius: 5px;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .sushi:hover img {
+          transform: scale(1.1); /* Збільшуємо зображення при наведенні */
+      }
+
+      .sushi-description {
+          display: none;
+          font-style: italic;
+          color: #666;
+          margin-top: 10px;
+      }
+
+      .sushi:hover .sushi-description {
+          display: block;
+      }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sushi">
+    <h2>Каліфорнія рол</h2>
+    <img src="https://fasol.tv/upload/iblock/a1a/s6p0jibxfwnysixsp71o7cy1qubb6nd5.jpg" alt="Каліфорнія рол">
+    <p class="sushi-description">Склад: крабове м'ясо, авокадо, огірок, ікра тобіко, кунжут.</p>
+  </div>
+
+  <div class="sushi">
+    <h2>Філадельфія рол</h2>
+    <img src="https://сушиопт.рф/upload/iblock/8c4/w3y2rw4wio7s30r71rk2576n1b1xg3nm.jpg" alt="Філадельфія рол">
+    <p class="sushi-description">Склад: лосось, авокадо, огірок, вершковий сир.</p>
+  </div>
+
+  <div class="sushi">
+    <h2>Спайсі тунець</h2>
+    <img src="https://okeansushi.ru/templates/sushi/blog/spays-rollyi-sostav-i-retsept-2.jpg" alt="Спайсі тунець">
+    <p class="sushi-description">Склад: тунець, кунжут, соус спайсі, огірок.</p>
+  </div>
+
+  <div class="sushi">
+    <h2>Японський гарбуз</h2>
+    <img src="https://kiotorich.com/wp-content/uploads/2023/12/z-garbuzom-1.jpg" alt="Японський гарбуз">
+    <p class="sushi-description">Склад: японський рис, авокадо, огірок, японський гарбуз.</p>
+  </div>
+</div>
+
+</body>
+</html>

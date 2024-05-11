@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+</head>
+<body>
+
+<h2>User Profile</h2>
+
+<div class="container">
+  <p>Preferred Currency: <%= current_user.preferred_currency %></p>
+  <!-- Отображение отношения выбранной валюты к доллару -->
+  <% if @exchange_rate_to_usd %>
+    <p>Exchange Rate to USD: <%= @exchange_rate_to_usd %></p>
+  <% else %>
+    <p>Exchange Rate to USD: Not Available</p>
+  <% end %>
+</div>
+
+</body>
+</html>
