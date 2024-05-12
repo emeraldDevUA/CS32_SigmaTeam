@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   # Setting the root path to the home page
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   root 'pages#index'
+=======
+  root 'pages#home'
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
   root 'pages#home'
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
@@ -29,11 +33,15 @@ Rails.application.routes.draw do
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   get '/home', to: 'pages#home'
   resource :profile, only: [:show, :edit, :update]
 
   get '/profile', to: 'profiles#show'
 
+=======
+  resource :profile, only: [:show, :edit, :update]
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
   resource :profile, only: [:show, :edit, :update]
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d

@@ -12,7 +12,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_05_12_212137) do
+=======
+ActiveRecord::Schema[7.1].define(version: 2024_05_11_135822) do
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
 ActiveRecord::Schema[7.1].define(version: 2024_05_11_135822) do
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
@@ -40,7 +44,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_11_135822) do
     t.string "preferred_currency"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     t.string "currency_preference"
+=======
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -11,6 +12,8 @@ class User < ApplicationRecord
 =======
 =======
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
+=======
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,6 +22,9 @@ class User < ApplicationRecord
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
+=======
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d

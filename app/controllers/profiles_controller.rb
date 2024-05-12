@@ -37,12 +37,16 @@ class ProfilesController < ApplicationController
   end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 end
 
 Rails.application.routes.draw do
 
   resource :profile, only: [:show, :edit, :update]
 end
+=======
+end
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
 end
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d

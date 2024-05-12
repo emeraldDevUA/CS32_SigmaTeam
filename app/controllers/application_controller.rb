@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
     if resource.is_a?(User) && request.path == "/users/sign_in"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       profile_path
+=======
+      foods_index_path
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
       foods_index_path
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d

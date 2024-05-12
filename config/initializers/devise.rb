@@ -126,8 +126,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   config.remember_for = 2.weeks
 
+=======
+>>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
 >>>>>>> f53bf749b736d38e6649e3dac1fc0cf30cfbb74d
 =======
