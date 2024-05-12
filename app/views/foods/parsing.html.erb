@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakefile</title>
+</head>
+<body>
+<div id="message"></div>
+
+<script>
+
+    function showMessage(message) {
+        var messageDiv = document.getElementById("message");
+        messageDiv.textContent = message;
+    }
+
+
+    function showData(data) {
+        var messageDiv = document.getElementById("message");
+        var dataDiv = document.createElement('div');
+        dataDiv.textContent = JSON.stringify(data, null, 2);
+        messageDiv.appendChild(dataDiv);
+    }
+
+
+    const require = (moduleName) => {
+        switch (moduleName) {
+            case 'open-uri':
+                // код для завантаження URL
+                break;
+            case 'nokogiri':
+                // код для парсингу HTML
+                break;
+            case 'sqlite3':
+                // код для роботи з SQLite
+                break;
+            case 'active_record':
+                // код для роботи з ActiveRecord
+                break;
+            default:
+                console.error(`Module ${moduleName} is not found!`);
+        }
+    };
+
+
+    const ActiveRecord = {
+        establishConnection: (config) => {
+
+        }
+    };
+
+
+    class BusinessModel {
+
+    }
+
+
+    const require_relative = (file) => {
+
+    };
+
+    const ActiveRecordMigrationContext = {
+        new: (directory) => {
+            return {
+                migrate: () => {
+
+                },
+                rollback: () => {
+
+                }
+            };
+        }
+    };
+
+
+    const db = {
+        migrate: () => {
+
+        },
+        rollback: () => {
+
+        }
+    };
+
+    const parse = {
+        wikipedia_category: () => {
+
+            var parsedData = [
+                {
+                    "title": "Article 1",
+                    "content": "Content of article 1"
+                },
+                {
+                    "title": "Article 2",
+                    "content": "Content of article 2"
+                }
+            ];
+
+            showMessage('Parsing and saving completed!');
+            showData(parsedData);
+        }
+    };
+
+
+    parse.wikipedia_category();
+</script>
+</body>
+</html>

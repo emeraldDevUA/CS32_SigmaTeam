@@ -1,0 +1,2 @@
+class OnlineRetailer < ApplicationRecord
+end

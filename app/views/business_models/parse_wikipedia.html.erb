@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parse Wikipedia</title>
+</head>
+<body>
+<h1 id="parsingCompletedHeader">Parsing and saving completed!</h1>
+<div id="parsedData"></div>
+
+<script>
+
+    function showDataAndMessage(message, data) {
+        console.log("Showing data and message...");
+        var messageHeader = document.getElementById("parsingCompletedHeader");
+        messageHeader.textContent = message;
+
+        var parsedDataDiv = document.getElementById("parsedData");
+
+        parsedDataDiv.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    }
+
+
+    const parse = {
+        wikipedia_category: () => {
+
+            console.log("Parsing Wikipedia data...");
+            const parsedData = [
+                { title: "Article 1", content: "Content of article 1" },
+                { title: "Article 2", content: "Content of article 2" }
+            ];
+
+
+            showDataAndMessage('Parsing and saving completed!', parsedData);
+        }
+    };
+
+
+    parse.wikipedia_category();
+</script>
+</body>
+</html>

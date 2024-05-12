@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна сторінка</title>
+  <!-- Посилання на файли Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+      /* Загальні стилі */
+      body {
+          background-color: #f8f9fa; /* Колір фону */
+          position: relative; /* Додаємо для позиціонування */
+          overflow: hidden; /* Забороняємо виходження за межі екрану */
+      }
+
+      /* Стилі для фонових зображень */
+      .background-left,
+      .background-right {
+          position: fixed;
+          width: 100%; /* Змінено ширину на 100% */
+          height: 100%;
+          top: 0;
+          background-size: cover;
+          background-position: center; /* Центруємо фон */
+          filter: blur(10px);
+          z-index: -1;
+      }
+
+      .background-left {
+          background-image: url('https://ss.sport-express.ru/userfiles/materials/173/1730574/full.jpg');
+          left: 0;
+          opacity: 0.5; /* Зменшуємо прозорість */
+      }
+
+      .background-right {
+          background-image: url('https://ss.sport-express.ru/userfiles/materials/173/1730574/full.jpg');
+          right: 0;
+          opacity: 0.5; /* Зменшуємо прозорість */
+      }
+
+      /* Стилі для рамки з інформацією сайта */
+      .content-frame {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 50px; /* Збільшено відступи */
+          border-radius: 10px;
+          width: 80%; /* Збільшено ширину рамки */
+          max-width: 800px; /* Максимальна ширина */
+      }
+
+      /* Стилі для кнопки "Мій профіль" */
+      .profile-button {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+      }
+
+  </style>
+
+</head>
+<body>
+
+<div class="background-left"></div> <!-- Додали ліве фонове зображення -->
+<div class="background-right"></div> <!-- Додали праве фонове зображення -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col text-center">
+      <div class="content-frame"> <!-- Додали рамку для контенту -->
+        <h1>SwiftFood</h1>
+        <h1>Список товарів</h1>
+
+        <!-- Ваш контент сайту тут -->
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="/pizza"><img src="https://cdnn21.img.ria.ru/images/98976/61/989766135_0:105:2000:1230_1920x0_80_0_0_16a8fff0f23e9297155772f93b403aed.jpg" class="d-block w-100" alt="Піца"></a>
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <a href="/sushi"><img src="https://fusedbyfionauyema.com/wp-content/uploads/2021/02/Fused-by-Fiona-Uyema-Sushi-Q-A-how-to-make-sushi-at-home.jpg" class="d-block w-100" alt="Суші"></a>
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <a href="/burgers"><img src="https://mliesl.edu/contents/wp-content/uploads/2022/11/image5.jpg" class="d-block w-100" alt="Бургери"></a>
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <button class="btn btn-outline-dark btn-lg">Подивитися більше</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ваша основная страница -->
+<button class="btn btn-outline-dark btn-lg profile-button"><%= link_to "Мій профіль", profile_path %></button>
+
+
+</body>
+</html>

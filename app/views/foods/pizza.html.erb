@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Види піци</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f9fa; /* Колір фону */
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+          background-color: rgba(255, 255, 255, 0.8); /* Прозорий фон контейнера */
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь контейнера */
+      }
+
+      .pizza {
+          width: calc(33.33% - 40px); /* Однакова ширина для кожного блоку з піцею */
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+          background-color: #fff;
+          transition: box-shadow 0.3s ease;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .pizza:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transform: scale(1.05); /* Збільшуємо зображення при наведенні */
+      }
+
+      .pizza img {
+          width: 200px;
+          border-radius: 5px;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .pizza:hover img {
+          transform: scale(1.1); /* Збільшуємо зображення при наведенні */
+      }
+
+      .pizza-description {
+          display: none;
+          font-style: italic;
+          color: #666;
+          margin-top: 10px;
+      }
+
+      .pizza:hover .pizza-description {
+          display: block;
+      }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="pizza">
+    <h2>Маргарита</h2>
+    <img src="https://lh3.googleusercontent.com/-F7-f2RyixFJ_0-MIGehlz7lp08CkWuy7Y64qDx8zcSrAyHA_uWVnJx1XOVAHg_qoFD7fW34aWScKlOz7tlHx8LeBxDoB64vaZ6LCKKMAPPnr8-QTpPpQVVK-xGPWFZomSVkVZXW" alt="Маргаріта">
+    <p class="pizza-description">Класична піца з томатним соусом, моцареллою, помідорами та базиліком.</p>
+  </div>
+
+  <div class="pizza">
+    <h2>Пепероні</h2>
+    <img src="https://cdnn21.img.ria.ru/images/98976/61/989766135_0:105:2000:1230_1920x0_80_0_0_16a8fff0f23e9297155772f93b403aed.jpg" alt="Пепероні">
+    <p class="pizza-description">Піца з пікантним салямі, томатним соусом та сиром.</p>
+  </div>
+
+  <div class="pizza">
+    <h2>Вегетаріанська</h2>
+    <img src="https://cipollino.ua/content/uploads/images/vegan-pizza-recipe-cipollino.ua.jpg" alt="Вегетеріанська">
+    <p class="pizza-description">Піца з солодким перцем, грибами, оливками, томатами, моцареллою та томатним соусом.</p>
+  </div>
+
+  <div class="pizza">
+    <h2>Гавайська</h2>
+    <img src="https://distfood.ru/upload/medialibrary/86a/86ab43892301045cb950f9874be29805.jpg" alt="Гавайська">
+    <p class="pizza-description">Піца з шинкою, ананасами, моцареллою та томатним соусом.</p>
+  </div>
+</div>
+
+</body>
+</html>

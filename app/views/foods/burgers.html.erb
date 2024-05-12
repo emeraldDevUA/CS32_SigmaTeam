@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Види бургерів</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f9fa; /* Колір фону */
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+          background-color: rgba(255, 255, 255, 0.8); /* Прозорий фон контейнера */
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь контейнера */
+      }
+
+      .burger {
+          width: calc(33.33% - 40px); /* Однакова ширина для кожного блоку з бургером */
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          text-align: center;
+          background-color: #fff;
+          transition: box-shadow 0.3s ease;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .burger:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transform: scale(1.05); /* Збільшуємо зображення при наведенні */
+      }
+
+      .burger img {
+          width: 200px;
+          border-radius: 5px;
+          transition: transform 1s ease; /* Додано час переходу для зображення */
+      }
+
+      .burger:hover img {
+          transform: scale(1.1); /* Збільшуємо зображення при наведенні */
+      }
+
+      .burger-description {
+          display: none;
+          font-style: italic;
+          color: #666;
+          margin-top: 10px;
+      }
+
+      .burger:hover .burger-description {
+          display: block;
+      }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="burger">
+    <h2>Класичний бургер</h2>
+    <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2020/11/hamburger-2000x1200.jpg" alt="Класичний бургер">
+    <p class="burger-description">Склад: котлета з яловичини, сир, помідор, огірок, салат, соус.</p>
+  </div>
+
+  <div class="burger">
+    <h2>Чізбургер</h2>
+    <img src="https://static.tildacdn.com/tild3433-6465-4430-a465-313633373463/FARSH2607202211977.jpg" alt="Чізбургер">
+    <p class="burger-description">Склад: котлета з яловичини, сир, бекон, помідор, огірок, салат, соус.</p>
+  </div>
+
+  <div class="burger">
+    <h2>Веган бургер</h2>
+    <img src="https://cdn.lifehacker.ru/wp-content/uploads/2020/08/vegan_1598609553-e1599480182390-1280x640.jpg" alt="Веган бургер">
+    <p class="burger-description">Склад: соєва котлета, овочі, салат, соус на рослинній основі.</p>
+  </div>
+
+  <div class="burger">
+    <h2>Курячий бургер</h2>
+    <img src="https://gymbeam.cz/blog/wp-content/uploads/2022/05/burger-do-clanku.png" alt="Курячий бургер">
+    <p class="burger-description">Склад: куряча котлета, сир, помідор, огірок, салат, майонезний соус.</p>
+  </div>
+</div>
+
+</body>
+</html>
